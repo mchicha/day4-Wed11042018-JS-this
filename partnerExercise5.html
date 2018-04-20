@@ -1,0 +1,40 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Reveal Secret</title>
+       
+    </head>
+    <body>
+        
+        <script type="text/javascript">
+            var secret;
+            var revealSecret = function () {
+                return secret;
+            };
+
+            var shoutIt = function (person, func) {
+                person.revealItAll = func;
+                var result = person.revealItAll();
+                alert(person.name + " said: " + person.secret);
+                
+            };
+
+            var avi = {
+                name: "Avi",
+                secret: "Im scared of snakes!"
+            };
+
+            var narkis = {
+                name: "Narkis",
+                secret: "I dont have secrets because I'm zen like that."
+            };
+
+            shoutIt(avi, revealSecret);
+            shoutIt(narkis, revealSecret);
+        </script>
+       
+    </body>
+</html>

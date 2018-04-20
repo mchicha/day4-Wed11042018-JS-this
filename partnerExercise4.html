@@ -1,0 +1,34 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>TipJar</title>
+       
+    </head>
+    <body>
+        
+        <script type="text/javascript">
+            var tipJar = {
+                coinCount: 20,
+                tip: function () {
+                    this.coinCount += 1;
+                },
+                stealCoins: function (amount) {
+                    this.coinCount -= amount;
+                }
+            };
+
+            tipJar.tip();
+            console.log('Wishing well should have 21 coins: ' + tipJar.coinCount);
+
+            tipJar.stealCoins(3);
+            console.log('Wishing well should have 18 coins: ' + tipJar.coinCount);
+
+            tipJar.stealCoins(10);
+            console.log('Wishing well should have 8 coins: ' + tipJar.coinCount);
+        </script>
+       
+    </body>
+</html>

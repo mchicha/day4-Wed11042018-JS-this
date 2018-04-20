@@ -1,0 +1,39 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Plane</title>
+       
+    </head>
+    <body>
+        
+        <script type="text/javascript">
+            var pumpFuel = function (plane) {
+                plane.fuel += 1;
+            };
+
+            var airplane = {
+                fuel: 0,
+                fly: function () {
+                    if (this.fuel < 2) {
+                    return 'on the ground!';
+                    }
+                    else {
+                    return 'flying!';
+                    }
+                }
+            };
+
+            console.log('The plane should not be able to fly (yet): ' + airplane.fly());
+
+            pumpFuel(airplane);
+            console.log('The plane should STILL not be able to fly: ' + airplane.fly());
+
+            pumpFuel(airplane);
+            console.log('Can it fly now? ' + airplane.fly());
+        </script>
+       
+    </body>
+</html>
